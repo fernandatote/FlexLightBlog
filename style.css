@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+
+body {
+  font-family: 'Old Standard TT', serif;
+  padding: 0;
+  margin: 0;
+}
+
+header, footer {
+  line-height: 40px;
+  margin: 5px;
+}
+
+header h1 {
+  border: 1px solid black;
+  margin: 0;
+  height: 40px;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+
+header, main, footer {
+  max-width: 1950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  border: 1px solid black;
+  flex: 1 0 auto;
+  text-align: center;
+  height: 40px;
+  margin-left: 2px;
+  box-sizing: border-box;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+main h2, main p {
+  margin-left: 5px;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+@media screen and (max-width: 392px) {
+    li:last-of-type {
+      margin-top: 2px;
+    }
+}
+
+@media screen and (max-width: 779px) {
+    header nav {
+      margin-top: 2px;
+    }
+
+    nav ul li {
+      margin-left: 0;
+    }
+
+    li {
+      margin-right: 2px;
+    }
+
+    nav ul{
+      flex-flow: row wrap;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      flex: 1 1 30%;
+    }
+
+    header nav {
+      flex: 2 1 70%;
+    }
+
+    main {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    main article {
+      flex: 1 1 390px;
+    }
+
+    article:nth-child(4n+3), article:nth-child(4n+4){ /*starting from article 4 and next 2 3x0 + 4, odds*/
+      background-color: lightgray;
+    }
+}
+
+@media screen and (min-width: 1195px) {
+  article:nth-child(4n+3), article:nth-child(4n+4){
+    background-color: white ;
+  }
+
+  article:nth-child(6n+4), article:nth-child(6n+5), article:nth-child(6n+6){
+    background-color: lightgray;
+  }
+}
+
+@media screen and (min-width: 1577px) {
+  main h2 {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 90%;
+    margin: 10px 0 0 0;
+    position: absolute; /*show above img*/
+  }
+
+  main p {
+    margin: 0;
+    margin-left: 5px;
+    font-size: 90%;
+    flex: 1 0 120px;
+  }
+
+  main article {
+    border: 2px solid black;
+    display: flex;
+    flex: 1 1 380px;
+  }
+
+  .img-box {
+    flex: 1 0 250px;
+  }
+
+  article:nth-child(6n+4), article:nth-child(6n+5), article:nth-child(6n+6){
+    background-color: white;
+  }
+
+  article:nth-child(8n+5), article:nth-child(8n+6), article:nth-child(8n+7), article:nth-child(8n+8){ /*starting from article 5 and jumping to next 8*/
+    background-color: lightgray;
+  }
+
+  article:nth-child(29), article:nth-child(30){
+    flex: 0 1 25%;
+  }
+}
